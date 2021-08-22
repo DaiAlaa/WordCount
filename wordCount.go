@@ -73,11 +73,11 @@ func reducer(arr []string, sharedMap map[string]int, c chan int) {
 }
 
 func main() {
-	// fmt.Print("Enter file path: ")
-	// var inputFile string
-	// fmt.Scanln(&inputFile)
+	fmt.Print("Enter file path: ")
+	var inputFile string
+	fmt.Scanln(&inputFile)
 
-	file, _ := ioutil.ReadFile("test.txt")
+	file, _ := ioutil.ReadFile(inputFile)
 	text := string(file)
 	words := strings.Split(strings.ToLower(strings.ReplaceAll(text, "\r\n", " ")), " ")
 
